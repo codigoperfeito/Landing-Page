@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Eterno Heroi</title>
+    <link href="https://fonts.cdnfonts.com/css/satoshi" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.cdnfonts.com/css/tt-firs-neue-trl" rel="stylesheet">
+
+
+
+
+<style>
+.Satoshi-600 {
+    font-weight: 600;
+    font-family: 'Satoshi', sans-serif;
+}
+
+.Satoshi {
+    font-family: 'Satoshi', sans-serif;
+}
+
+body {
+    font-family: 'TT Firs Neue Trl', sans-serif;
+}
+
+header,
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+}
+
+header h1,
+footer p {
+    color: black;
+    line-height: 0;
+}
+
+
+.sub-text-small {
+    color: #abb8c3;
+}
+
+.content {
+    padding: 2rem 0;
+}
+
+.max-width-img {
+    max-width: 160px;
+    /* Definindo a largura mínima */
+}
+
+.top-image-background {
+    background-image: url("https://i.imgur.com/jYfJ3hV.png");
+    background-size: contain;
+    background-position: top right;
+    background-color: #060606;
+    background-repeat: no-repeat;
+}
+
+.img-logo {
+    margin: 10px 0 10px 0;
+    width: 30%;
+    height: auto;
+}
+
+.font-color-azul-bb {
+    color: #16afdd;
+}
+
+.font-color-w {
+    color: #fff;
+}
+
+/*---------- youtube ------------*/
+
+.youtube-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    max-width: 500px;
+}
+
+.responsive-iframe-container {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    /* Define o tamanho máximo */
+    padding-bottom: 56.25%;
+    /* Proporção 16:9 */
+    height: 0;
+    overflow: hidden;
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/*---------- youtube ------------*/
+
+.bnt-center {
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #0094c0;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 255, 0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Bebas Neue', sans-serif;
+    animation: moveUpAndDown 2s infinite;
+}
+
+@keyframes moveUpAndDown {
+    0% {
+        transform: translateY(0);
+        /* Posição inicial */
+    }
+
+    50% {
+        transform: translateY(-15px);
+        /* Move 5px para cima */
+    }
+
+    100% {
+        transform: translateY(0);
+        /* Volta para a posição inicial */
+    }
+}
+
+.bnt-center:hover {
+    background-size: 150% 150%;
+    transform: translateY(-5px);
+    background-color: #00FFFF;
+    color: #000;
+    animation: pulse-border 2s infinite linear;
+    border-radius: 50px;
+}
+
+/* ------ new-effect ----------- */
+.ticker-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    background-color: #0094c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.ticker {
+    display: flex;
+    animation: ticker 20s linear infinite;
+}
+
+.ticker-item {
+    flex: none;
+    white-space: nowrap;
+    padding-right: 100px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.ticker-container::before,
+.ticker-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+    z-index: 2;
+}
+
+.ticker-container::after {
+    right: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.ticker-container::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+/* ------ effect ----------- */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.container>h4 {
+    display: flex;
+}
+
+.bg-black {
+    background-color: #010609;
+}
+
+.mid-boy-img {
+    max-height: 700px;
+}
+
+.flex-item>h2 {
+    font-weight: 600;
+}
+
+
+.widget-container-mid {
+    background-image: url('https://i.imgur.com/mAQwrAJ.png');
+    background-size: cover;
+    background-position: top center;
+    background-color: #060606;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-family: 'Satoshi';
+    position: relative;
+}
+
+.widget-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.65);
+    /* Sobreposição semi-transparente para escurecer */
+    z-index: 1;
+}
+
+.background-container {
+    position: relative;
+    z-index: 2;
+}
+
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Overlay para melhorar a legibilidade */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+}
+
+.highlight {
+    color: #0094c0;
+}
+
+.mid-highlight-course {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: #000;
+}
+
+.degra-d {
+    background: linear-gradient(to bottom, #000000, #313a52);
+    color: #fff;
+}
+
+.middle-container{
+    background-color: #000;
+    color: #fff;
+}
+
+.max-width-middle{
+    max-width: 700px;
+}
+.card-custom{
+    color: #000;
+    max-width: 400px;
+}
+.instrutor-img img {
+    width: 100%;
+    height: auto;
+}
+.primary-link{
+    text-decoration: none;
+}
+footer>.container>p{
+    margin: 0;
+    padding: 0;
+}
+footer{
+    padding: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    #none {
+        display: none;
+    }
+
+    .bnt-center {
+        font-size: 1rem;
+    }
+
+    .widget-container-mid {
+        background-position: top right;
+        background-image: url("https://i.imgur.com/pijYh6z.png");
+    }
+    .middle-container {
+        background-image: url(https://i.imgur.com/F57tQqP.png);
+        background-size: 100%;
+        background-position: top left;
+        background-color: rgb(40 44 56);
+        background-repeat: no-repeat;
+        color: #fff;
+    }
+    .row-cols-1>* {
+        width: 70%;
+    }
+}
+@media (max-width: 768px) {
+    .instrutor-img .row {
+        display: none;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .mobile-on {
+        display: block;
+    }  
+    .mobile-off {
+        display: none;
+    }
+    .max-width-middle{
+        max-width: 600px;
+    }
+    
+}
+@media (min-width: 1200px) {
+    
+}
+
+
+/*-------------------------------------------*/
+
+@media (min-width: 576px) {
+    h2 {
+        font-size: 1.4rem;
+        /* Tamanho para telas ≥576px */
+    }
+
+    h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 1.6rem;
+        /* Tamanho para telas ≥768px */
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+    .carousel {
+        display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .mobile-off {
+        display: block;
+    }
+    .mobile-on {
+        display: none;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        /* Tamanho para telas ≥992px */
+    }
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .top-image-background {
+        background-size: cover;
+    }
+
+    .background-container {
+        font-size: 1.6rem;
+    }
+    .card-body{
+        max-width: 330px;
+    }
+    .image-container>img{
+        max-width: 400px;
+    }
+    .garantia{
+        max-width: 65rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    h2 {
+        font-size: 2rem;
+        /* Tamanho para telas ≥1200px */
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+</style>
+</head>
+
+<body>
+    <header class="top-image-background">
+        <div class="container">
+            <div class="row flex-center text-align-center">
+                <img src="https://i.imgur.com/EcfShZS.png" class="img-logo img-fluid rounded max-width-img" alt="logo">
+                <h4 class=""> <strong> A MISSAO CONTINUA! </strong> <br> Seja para o alistamento, para o engajamento ou
+                    para a recolocação <br>
+                    no mercado de trabalho. A pergunta é:
+                    <span class="font-color-azul-bb"> você está preparado?</span></br>
+                </h4>
+    
+                <h6 class="">
+                    <span class="sub-text-small">Assista o vídeo para descobrir como você pode vencer qualquer
+                        missão da sua vida.</span>
+                </h6>
+                <div class="container youtube-container">
+                    <div class="responsive-iframe-container">
+                        <iframe
+                            src="https://www.youtube-nocookie.com/embed/VAM3h8Iy3eM?si=UGdOotPsk3z_x6MV&amp;controls=0&showinfo=0&fs=0&rel=0&showinfo=0&modestbranding=0"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+    
+                <p class="h6 font-md Satoshi">
+                    Tanto as forças armadas quanto as empresas privadas estão em busca de jovens <br>
+                    comprometidos com habilidades diferenciadas que possam contribuir significativamente. <br>
+                    a pergunta é: <span class="font-color-azul-bb">
+                        você sabe quais são essas habilidades?
+                    </span>
+                </p>
+    
+                <div class="container" style="margin:20px">
+                    <button type="button" class="bnt-center btn"
+                        onclick="document.getElementById('planos').scrollIntoView({ behavior: 'smooth' });">
+                        Quero me qualificar, VENCER É MISSÃO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="ticker-container">
+        <div class="ticker">
+            <div class="ticker-item">Mais de 7000 alunos certificados</div>
+            <div class="ticker-item">Satisfação garantida</div>
+            <div class="ticker-item">Pagamento 100% seguro</div>
+            <div class="ticker-item">Acesso imediato</div>
+        </div>
+    </div>
+    <div class="widget-container-mid">
+        <div class="widget-overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="background-container">
+                    <div class="container content">
+                        <p style="max-width: 600px;">Para muitos, o sonho de ingressar nas Forças Armadas ou continuar
+                            uma carreira militar sólida é frustrado pela falta de qualificação necessária para se
+                            destacar entre os concorrentes.</p>
+                        <h3 class="highlight"><strong>Pense bem:</strong></h3>
+                        <p style="max-width: 800px; margin-bottom: 20px;">Você se alista cheio de esperança, mas
+                            descobre que a competição é intensa e a falta de capacitação específica reduz suas chances
+                            de ser selecionado. Você serve temporariamente, dedicando seu tempo e esforço ao serviço
+                            militar, mas ao término do seu contrato, você se vê de volta ao mercado civil sem a
+                            qualificação necessária para obter um bom emprego. Você enfrenta a dura realidade de que,
+                            sem as certificações e habilidades exigidas, suas experiências e competências adquiridas no
+                            serviço militar não são suficientes para garantir uma transição suave e bem-sucedida para a
+                            vida civil. A falta de preparação e qualificação específica é uma barreira significativa,
+                            deixando muitos jovens e ex-militares em uma situação de vulnerabilidade e incerteza. Nós
+                            entendemos a sua dor.</p>
+                        <h3 class="highlight"><strong>E ESTAMOS AQUI PARA AJUDAR.</strong></h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-highlight-course">
+        <img src="https://imgur.com/bH5Gk5g.png" class="img-fluid mobile-off" alt="">
+        <img src="https://imgur.com/n3c3VIp.png" class="img-fluid mobile-on" alt="">
+    </div>
+
+    <section class="" style="background-color: #000; color: #fff;">
+        <div class="container">
+            <div class="content d-flex flex-column flex-container text-align-center ">
+                <div class="flex-item content">
+                    <button 
+                        type="button"
+                        class="bnt-center btn"
+                        onclick="document.getElementById('planos').scrollIntoView({ behavior: 'smooth' });">
+                            Quero me qualificar, VENCER É MISSÃO
+                    </button>
+                </div>
+                <div class="flex-item">
+                    <div class="font-md fs-4 ">
+                        Você está prestes a ter acesso à plataforma que já transformou a vida de milhares de
+                        militares, veteranos e seus familiares. <br> <br>
+                        Se você acha que ter sucesso na vida é sorte, então você está no lugar errado. Aqui vamos
+                        preparar pessoas comprometidas
+                        com a sua missão que é VENCER. <br> <br>
+                        Com a <span class="font-color-azul-bb">metodologia EH50</span> você terá acesso a um passo a
+                        passo que vai te trazer tudo o que você
+                        precisa desde a qualificação profissional, até o seu planejamento de transição de carreira. <br>
+                        <br>
+                        Feito para quem quer ser militar, militares, veteranos e sua família. <br> <br>
+                        Não importa se você está entrando para o quartel ou para quem já saiu, no <span
+                            class="font-color-azul-bb">Método EH50</span> nossos
+                        mentores te explica as estratégias que você vai usar na sua jornada para o sucesso. <br> <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="mid-highlight-course d-flex flex-column" style="background-color: #000; color: #fff;">
+        <img src="https://i.imgur.com/9M8b1tR.png" class="img-fluid mobile-off" alt="">
+        <img src="https://imgur.com/j2D0zPa.png" class="img-fluid mobile-on" alt="">
+        <div class="container">
+            <div class="d-flex flex-column flex-container text-align-center content">
+                <div class="flex-item">
+                    <h2 class="text-uppercase font">
+                        <span class="font-color-azul-bb">
+                            <strong>
+                                Aprendendo com quem viveu! <br> Esse não é mais um curso qualquer,
+                                mas disso você já sabe! </span>
+                        </strong>
+                    </h2>
+                    <p class="fs-3">
+                        Com aulas para você assistir de onde quiser, o <span class="font-color-azul-bb">METODO
+                            EH50</span> <br> <br>
+                        foi feito para você que APREDEU QUE MISSÃO DADA É MISSÃO CUMPRIDA
+                        e não quer deixar que um SISTEMA TE PARALISE E PESSOAS QUE NÃO POSSUI SEUS
+                        ATRIBUTOS DE UM COMBATENTE tome o seu lugar.
+                    </p>
+                    <p class="fs-3">
+                        Criado pelo veterano paraquedista militar Vinicius Arariba,
+                        o <span class="font-color-azul-bb">Método EH50</span> foi
+                        desenvolvido por especialistas para ser
+                        dinâmico e eficiente, garantindo um aproveitamento máximo.
+                        Se você deseja ingressar nas forças armadas, se engajar ou
+                        assegurar sua posição no mercado de trabalho, este método é para você.
+                        Entendemos as dificuldades da transição para a vida civil.
+                        Com o <span class="font-color-azul-bb">Método EH50</span>,
+                        você obterá o conhecimento necessário e os segredos essenciais
+                        para alcançar o sucesso!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="middle-container " style="color: #fff;">
+        
+    </div>
+
+    <div class="mid-highlight-course" style="background: #000; color: #fff;">
+        <div class="container middle-conteudo2-container d-flex flex-column flex-container text-align-center">
+            <div class="mt-4">
+                <div class=" flex-item">
+                    <h2 class="mt-4">O que você encontrará no Método EH50:</h2>
+                    <ul class="justify-content-center list-unstyled mt-4 fs-4 row row-cols-1 row-cols-md-4 g-4  d-flex row">
+                        <li class="col text-center">
+                            <i class="bi bi-laptop fs-1"> <img class="mb-4 img-logo img-fluid rounded max-width-img" src="https://i.imgur.com/M8rhGCQ.png" alt=""> </i> <br>
+                            <strong class="font-color-azul-bb">Acesso à nossa plataforma exclusiva:</strong> Mais de
+                            50 cursos de capacitação, todos com certificados que validam suas habilidades.
+                        </li>
+                        <li class="col text-center">
+                            <i class="bi bi-laptop fs-1"> <img class="mb-4 img-logo  img-fluid rounded max-width-img" src="https://imgur.com/MYeHCYJ.png" alt=""> </i> <br>
+                            <strong class="font-color-azul-bb">Projetos focados:</strong> Cursos projetados para
+                            aumentar suas chances de ingressar nas forças armadas, garantir maiores oportunidades de
+                            engajamento e melhorar sua empregabilidade na vida civil, evitando o desemprego.
+                        </li>
+                        <li class="col text-center">
+                            <i class="bi bi-laptop fs-1"> <img class="mb-4 img-logo img-fluid rounded max-width-img" src="https://i.imgur.com/m2jNSck.png" alt=""> </i> <br>
+                            <strong class="font-color-azul-bb">Desenvolvimento profissional contínuo:</strong>
+                            Ferramentas e <span class="text-uppercase">MENTORIAS</span> que acompanham você em todas
+                            as etapas da sua jornada, seja na carreira militar ou civil.
+                        </li>
+                    </ul>
+                </div>
+                <div class="flex-item content">
+                    <p class="font-md fs-4">
+                        Com o <span class="font-color-azul-bb">Método EH50</span>, você não estará apenas aprendendo,
+                        mas transformando sua vida.
+                        Junte-se a nós e veja como podemos ajudar
+                        você a alcançar seus objetivos e construir um futuro promissor.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mid-highlight-course pt-5 pb-5">
+        <div class="container d-flex flex-column text-center">
+            <h1 class="content"><strong>Os segredos de quem já sabe o que fazer!</strong></h1>
+            <div class="instrutor-img">
+                <div class="row">
+                    <div class="col-md-3">
+                        <img src="https://imgur.com/91uXdkF.png" class="img-fluid mb-3" alt="Imagem 1">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://imgur.com/EE3dDCA.png" class="img-fluid mb-3" alt="Imagem 2">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://i.imgur.com/Hvu5FfA.png" class="img-fluid mb-3" alt="Imagem 3">
+                    </div>
+                    <div class="col-md-3">
+                        <img src="https://imgur.com/Q12ZG5z.png" class="img-fluid mb-3" alt="Imagem 4">
+                    </div>
+                </div>
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://imgur.com/91uXdkF.png" class="d-block w-100" alt="Imagem 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://imgur.com/EE3dDCA.png" class="d-block w-100" alt="Imagem 2">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://i.imgur.com/Hvu5FfA.png" class="d-block w-100" alt="Imagem 3">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://imgur.com/Q12ZG5z.png" class="d-block w-100" alt="Imagem 4">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Próximo</span>
+                  </button>
+            </div>
+            <h4 class="justify-content-center mt-4">E ainda de bônus aulas com VETERANOS experientes do nosso país!</h4>
+            <div class="flex-item content">
+                <button 
+                        type="button"
+                        class="bnt-center btn"
+                        onclick="document.getElementById('planos').scrollIntoView({ behavior: 'smooth' });">
+                            Quero me qualificar, VENCER É MISSÃO
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-highlight-course pt-5 pb-4">
+        <div class="container">
+            <p class="text-align-center fs-1 text-uppercase" style="color: #008e1c;">
+              <strong>
+                  + bônus exclusivos Aulas
+            </strong>  
+            </p>
+            <div class="row content Satoshi">
+                <div class="col-md-9 left-content">
+                    <div class="flex-row d-flex align-items-center content   ">
+                        <img src="https://i.imgur.com/Hvu5FfA.png" style="max-width: 100px ;" class="mx-3 img-fluid" alt="Imagem Esquerda">
+                        <p class="fs-4 fw-bolder">Aulas exclusivas com psicóloga Dra Aline parapreparação de currículo. R$735,00</p>
+                    </div>
+                    
+                    
+                </div>
+                <div class="col-md-3 right-content d-flex align-items-center justify-content-center  ">
+                    <div class="row align-items-center text-align-center justify-content-center">
+                        <img src="https://imgur.com/riyFDEO.png" alt=" Imagem Direita" style="max-height: 150px; width: auto;">
+                        <p class="fs-5"> <strong>06 modelos editáveis <br> de currículo 197,00</strong> </p>
+                    </div>
+                </div>
+            </div>
+            <p class="fs-4 text-align-center">
+                <strong>
+                    Comunidade exclusiva para dúvidas de entrevista, 
+                    oportunidades deemprego e direcionamento estratégico de forma vitalícia.
+                </strong>
+            </p>
+        </div>
+    </div>
+
+   
+
+    <div class="mid-highlight-course pt-5 pb-4">
+        <div class="container mt-4 mb-4 main-container">
+            <div class="row">
+                <div class="col-12 text-align-center">
+                    <h5 class="fw-bolder">NO PLANO ALPHA ou BRAVO VOCÊ Recebe SEU DIREITO DE ESTUDANTE, A SUA CARTEIRINHA DE ESTUDANTE
+                        padronizada nacionalmente pela Lei: 12.933/2013 e garante aos estudantes o direito a pagar MEIA
+                        ENTRADA em CINEMAS - TEATROS - FESTIVAIS DE ROCK - PARQUES AQUÁTICOS E DE DIVERSÃO - MUSEUS -
+                        ESTÁDIOS DE FUTEBOL, ZOOLÓGICOS E MUITOS OUTROS...</h5>
+                </div>
+                <div class="col-12 image-container justify-content-center d-flex mt-5 mb-5">
+                    <img src="https://imgur.com/VWNXIJg.png" class="img-fluid" alt="Carteirinha de Estudante">
+                </div>
+                <div class="col-12 text-align-center">
+                    <h4> <strong>São mais de R$1.600 em bônus se você adquirir o método <span class="highlight">EH50</span> durante
+                        esta oferta por tempo limitado.</strong> </h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="degra-d mid-highlight-course pt-2 pb-5">
+        <div class="container text-center Satoshi" id="planos">
+            <br><br>
+            <h2 class="highlight">METODOLOGIA EH50 daria R$ 7.350,00 + Todos os bônus R$ 1.696,00</h2>
+            <h1 class="total-price">TOTAL R$ 9.046,00</h1>
+            <p>Normalmente você pagaria mais de 9.046,00 reais em tudo isso que você pode ter acesso. Mas agora você tem a
+                chance de levar tudo isso por apenas...</p> <br>
+            <div class="row row-cols-1 d-inline-flex row-cols-md-3 g-4 justify-content-center ">
+                <div class="col justify-content-center d-flex">
+                    <div class="card card-custom">
+                        <div class="card-body d-flex justify-content-between flex-column">
+                            <h5 class="card-title"><strong>Plano ALPHA / ANUAL</strong></h5>
+                            <p class="card-text"><del>De 12x de 49,79</del> por 12x de R$ 49,79</p>
+                            <h3 class="font-color-azul-bb"><strong>R$ 597,47</strong></h3>
+                            <ul class="list-unstyled">
+                                <li>Cursos para transformação em profissionais de sucesso</li>
+                                <li>Certificado personalizado</li>
+                                <li>+ de 500 horas de conteúdo com vídeo aulas e materiais de apoio</li>
+                                <li>+ 20 profissionais qualificados como mentores</li>
+                                <li>Acesso a todos os cursos (POR 1 ANO)</li>
+                            </ul>
+                            <a class="btn btn-primary" href="https://heroisead.com.br/external-checkout/anual" role="button">ANUAL</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col justify-content-center d-flex">
+                    <div class="card card-custom">
+                        <div class="card-body d-flex justify-content-between flex-column">
+                            <h5 class="card-title"><strong>Plano BRAVO / SEMESTRAL</strong></h5>
+                            <p class="card-text"><del>De 6x de 74,66</del> por 6x de: R$ 74,66</p>
+                            <h3 class="font-color-azul-bb"><strong>R$ 447,97</strong></h3>
+                            <ul class="list-unstyled">
+                                <li>Cursos para transformação em profissionais de sucesso</li>
+                                <li>Certificado personalizado</li>
+                                <li>+ de 500 horas de conteúdo com vídeo aulas e materiais de apoio</li>
+                                <li>+ 20 profissionais qualificados como mentores</li>
+                            </ul>
+                            <a class="btn btn-primary" href="https://heroisead.com.br/external-checkout/semestral" role="button">SEMESTRAL</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col justify-content-center d-flex">
+                    <div class="card card-custom">
+                        <div class="card-body d-flex justify-content-between flex-column">
+                            <h5 class="card-title"><strong>Plano CHARLIE (TRIMESTRAL)</strong></h5>
+                            <p class="card-text"><del>De 3x de 99,67</del> por 3x de: R$ 99,67</p>
+                            <h3 class="font-color-azul-bb"><strong>R$ 299,00</strong></h3>
+                            <ul class="list-unstyled">
+                                <li>Cursos para transformação em profissionais de sucesso</li>
+                                <li>Certificado personalizado</li>
+                                <li>+ de 500 horas de conteúdo com vídeo aulas e materiais de apoio</li>
+                                <li>+ 20 profissionais qualificados como mentores</li>
+                                <li>Acesso a todos os cursos por 3 meses.</li>
+                            </ul>
+                            <a class="btn  btn-primary" href="https://heroisead.com.br/external-checkout/trimestral" role="button">TRIMESTRAL</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    <div class="depoiment-highlight content"style="background: #000; color: #fff;>
+        <div class="container">
+            <div class="row flex-center align-items-center text-align-center">
+                <h1 class="fw-bolder content">DEPOIMENTOS</h1>
+                <div class="row flex-column align-items-center">
+                    <div class="youtube-container">
+                        <div class="responsive-iframe-container">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/VAM3h8Iy3eM?si=UGdOotPsk3z_x6MV&amp;controls=0&showinfo=0&fs=0&rel=0&showinfo=0&modestbranding=0"
+                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                    encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="youtube-container">
+                        <div class="responsive-iframe-container">
+                            <iframe
+                                src="https://www.youtube-nocookie.com/embed/VAM3h8Iy3eM?si=UGdOotPsk3z_x6MV&amp;controls=0&showinfo=0&fs=0&rel=0&showinfo=0&modestbranding=0"
+                                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                    encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mid-highlight-course pt-5">
+        <img src="https://imgur.com/UPcp0Cs.png" class="img-fluid garantia" alt="">
+    </div>    
+
+    <footer class="bg-light text-center Satoshi py-1">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <p class="p-0 my-1">
+                    © 2024 Desenvolvido por&nbsp;
+                </p> 
+                    <a class=" primary-link fw-bolder" target="_blank" href="http://www.linkedin.com/in/wesleyalmeida-dev"> Wesley Almeida</a>
+                    <p class="my-1">
+                    <span class="ms-1">Todos os direitos reservados</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Incluindo o JS do Bootstrap 5 e dependências -->
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
